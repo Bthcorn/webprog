@@ -11,12 +11,21 @@
     }
 
     td {
-      text-align: center;
+      font-family: "Courier New", Courier, monospace;
+      color: red;
+    }
+
+    .colorful {
+      color: blue;
+    }
+
+    tr:hover {
+      background-color: coral;
     }
   </style>
   <body>
     <form>
-      <table>
+      <table class="colorful">
         <thead>
           <tr>
             <th colspan="2" rowspan=""></th>
@@ -78,12 +87,7 @@
             </th>
           </tr>
           <tr>
-            <th
-              rowspan="2"
-              colspan="2"
-              style="border-bottom: 1px solid"
-              class="table-head"
-            >
+            <th rowspan="2" colspan="2" style="border-bottom: 1px solid">
               Address:
             </th>
             <th>Education:</th>
@@ -156,10 +160,8 @@
             </th>
           </tr>
           <tr>
-            <th colspan="2" style="border-bottom: 1px solid" class="table-head">
-              Contact:
-            </th>
-            <th colspan="" style="border-bottom: 1px solid" class="table-head">
+            <th colspan="2" style="border-bottom: 1px solid">Contact:</th>
+            <th colspan="" style="border-bottom: 1px solid">
               Skills & Experience:
             </th>
           </tr>

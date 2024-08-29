@@ -12,22 +12,42 @@
 
     td {
       text-align: center;
+      color: red;
+      font-family: "Courier New", Courier, monospace;
+    }
+    <!-- .pseudo-class {
+      color: blue;
+    }
+    -- > tr:hover {
+      background-color: coral;
+    }
+    .table-head {
+      background-color: lightblue;
+    }
+
+    label {
+      font-weight: bold;
+      background-color: coral;
     }
   </style>
   <body>
     <form>
       <table>
-        <thead>
+        <thead style="background-color: coral">
           <tr>
             <th colspan="2" rowspan=""></th>
-            <th style="border-bottom: 1px solid">Personal Infomation:</th>
+            <th style="border-bottom: 1px solid" class="">
+              Personal Infomation:
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th rowspan=""></th>
             <th colspan="2">
-              Name:
+              <label for="name" style="color: black; background-color: blue">
+                Name:
+              </label>
               <br />
               <input type="text" id="name" name="name" placeholder="John Doe" />
             </th>
@@ -35,22 +55,22 @@
           <tr>
             <td colspan="2" rowspan="" style="align-items: center">
               <img
-                src="https://th.bing.com/th/id/OIP.tvaMwK3QuFxhTYg4PSNNVAHaHa?rs=1&pid=ImgDetMain"
+                src="https://th.bing.com/th/id/OIP.Q-ZRtH2jCAePPB7VN76XqQHaHa?rs=1&pid=ImgDetMain"
                 width="100"
                 alt="profile"
               />
             </td>
             <th colspan="2">
-              Age:
+              <label for="age"> Age: </label>
               <br />
               <input type="range" id="age" name="age" placeholder="0" />
               <span id="ageValue"></span>
             </th>
           </tr>
-          <tr>
+          <tr style="background-color: aqua">
             <th colspan="2" style="border-bottom: 1px solid"></th>
             <th colspan="">
-              Email:
+              <label for="email"> Email: </label>
               <br />
               <input
                 type="email"
@@ -196,6 +216,6 @@
         </tbody>
       </table>
     </form>
-    <script src="lab.js"></script>
+    <script src="/Lab/Lab3/lab.js"></script>
   </body>
 </html>

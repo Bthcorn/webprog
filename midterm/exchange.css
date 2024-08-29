@@ -1,0 +1,16 @@
+.exchangeheader {
+  background-color: purple;
+  color: #ffffff;
+}
+
+.evenrow tr:nth-child(even) {
+  background-color: #D8BFD8;
+}
+
+.tablefont {
+  font-family: Candara;
+}
+
+.hover td:first-child:hover {
+  color: #FF0000;
+}

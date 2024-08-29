@@ -13,35 +13,49 @@
     td {
       text-align: center;
     }
+
+    tr:hover {
+      background-color: coral;
+    }
+    .table-head {
+      background-color: lightblue;
+    }
+
+    label {
+      font-weight: bold;
+      background-color: coral;
+    }
   </style>
   <body>
     <form>
       <table>
-        <thead>
+        <thead class="table-head">
           <tr>
             <th colspan="2" rowspan=""></th>
-            <th style="border-bottom: 1px solid">Personal Infomation:</th>
+            <th style="border-bottom: 1px solid" class="table-head">
+              Personal Infomation:
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th rowspan=""></th>
             <th colspan="2">
-              Name:
+              <label for="name" style="font-size: 28px"> Name: </label>
               <br />
               <input type="text" id="name" name="name" placeholder="John Doe" />
             </th>
           </tr>
-          <tr>
+          <tr style="background-color: cadetblue">
             <td colspan="2" rowspan="" style="align-items: center">
               <img
-                src="https://th.bing.com/th/id/OIP.tvaMwK3QuFxhTYg4PSNNVAHaHa?rs=1&pid=ImgDetMain"
+                src="https://th.bing.com/th/id/OIP.Q-ZRtH2jCAePPB7VN76XqQHaHa?rs=1&pid=ImgDetMain"
                 width="100"
                 alt="profile"
               />
             </td>
             <th colspan="2">
-              Age:
+              <label for="age"> Age: </label>
               <br />
               <input type="range" id="age" name="age" placeholder="0" />
               <span id="ageValue"></span>
@@ -50,7 +64,7 @@
           <tr>
             <th colspan="2" style="border-bottom: 1px solid"></th>
             <th colspan="">
-              Email:
+              <label for="email"> Email: </label>
               <br />
               <input
                 type="email"
@@ -67,7 +81,7 @@
               <textarea id="profile"></textarea>
             </td>
             <th colspan="">
-              Phone:
+              <label for="phone"> Phone: </label>
               <br />
               <input
                 type="tel"
@@ -196,6 +210,6 @@
         </tbody>
       </table>
     </form>
-    <script src="lab.js"></script>
+    <script src="/Lab/Lab3/lab.js"></script>
   </body>
 </html>

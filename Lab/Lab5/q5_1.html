@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  @media screen and (min-height: 800px) {
+    img {
+      width: 150px;
+    }
+
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    p {
+      font-size: 14px;
+    }
+
+    .profile1 {
+      min-width: 100%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+  } 
+  
+  @media screen and (min-width: 600px) {
+    p {
+      font-size: 20px;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .profile2 {
+      min-width: 400px;
+    }
+  
+  }
+
+  @media screen and (min-width: 900px) {
+    p {
+      font-size: 26px;
+    }
+
+  }
+
+
+    
+</style>
+<body>
+    <div class="container">
+      <div class="profile1" style="flex-direction: column">
+        <img src="https://th.bing.com/th/id/OIP.tvaMwK3QuFxhTYg4PSNNVAHaHa?rs=1&pid=ImgDetMain"
+          alt="profile" />
+        <p>Address:</p>
+        <input type="text" id="street" name="address" placeholder="Maple Street" />
+        </br>
+        <input type="text" id="city" name="city" placeholder="California" />
+        </br>
+        <select name="country" id="country">
+          <option value="">Select a country</option>
+          <option value="Canada">Canada</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+        </select>
+        </br>
+        <p>Contact: </p>
+        <p>Reference: </p>
+        <textarea type="text" id="ref"></textarea>
+        <p>Favorite Color: </p>
+        <input type="color" id="favColour" name="color" />
+      </div>
+      <div>
+        <div class="profile2">
+          <p>Personal Information:</p>
+          <p>Name:</p>
+          <input type="text" id="name" name="name" placeholder="John Doe" />
+          <p>Age: </p>
+          <br />
+          <div>
+            <input type="range" id="age" name="age" placeholder="0" />
+            <span id="ageValue"></span>
+          </div>
+          <p>Email: </p>
+          <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="myEmail@gmail.com"
+          />
+          <p>Phone: </p>
+                <br />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="123-456-7890"
+                />
+        </div>
+        <div class="profile2">
+          <p>Education: </p>
+          <input
+                type="text"
+                id="university"
+                name="university"
+                placeholder="KMITL"
+              />
+          <p>Degree: </p>
+          <input
+                type="text"
+                id="degree"
+                name="degree"
+                placeholder="Software Engineering"
+              />
+          <p>Year of Graduation: </p>
+          <input
+                type="date"
+                id="graduation"
+                name="graduationYear"
+                placeholder="2021-01-01"
+              />
+        </div>
+        <div class="profile2">
+          <p>Skills & Experience</p>
+          <p>Skills: </p>
+          <textarea type="text" id="skills"></textarea>
+          <p>Experience: </p>
+          <textarea type="text" id="experience"></textarea>
+        </div>
+      </div>
+    </div>
+  <script src="lab.js"></script>
+</body>
+
+</html>
