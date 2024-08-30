@@ -1,4 +1,4 @@
-let number = 1;
+let number = 1; //gloval variable
 
 function setImg(number) {
   var img = document.getElementById('number');

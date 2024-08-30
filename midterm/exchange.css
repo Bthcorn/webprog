@@ -9,8 +9,13 @@
 
 .tablefont {
   font-family: Candara;
+  text-align: center;
 }
 
 .hover td:first-child:hover {
   color: #FF0000;
 }
+
+/* .hover td:nth-child(1):hover {
+  color: #FF0000;
+} */
