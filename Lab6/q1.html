@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Lists</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        width: 100px;
+      }
+    </style>
+    <script>
+      const table = document.getElementById("shoppingTable");
+
+      function addToTable() {
+        const name = document.getElementById("itemName").value;
+        const amount = document.getElementById("amount").value;
+        const price = document.getElementById("price").value;
+
+        const row = document.createElement("tr");
+        const nameCell = document.createElement("td");
+        const amountCell = document.createElement("td");
+        const priceCell = document.createElement("td");
+
+        nameCell.textContent = name;
+        amountCell.textContent = amount;
+        priceCell.textContent = price;
+
+        console.log(name, amount, price);
+
+        row.appendChild(nameCell);
+        row.appendChild(amountCell);
+        row.appendChild(priceCell);
+        console.log(row);
+
+        document.getElementById("shoppingTableBody").appendChild(row);
+      }
+
+      function resetTable() {
+        document.getElementById("shoppingTableBody").innerHTML = `<tr>
+          <td>Item Name</td>
+          <td>Amount</td>
+          <td>Price</td>
+        </tr>`;
+      }
+
+      function clearInputs() {
+        document.getElementById("itemName").value = "";
+        document.getElementById("amount").value = "";
+        document.getElementById("price").value = "";
+      }
+
+      function start() {
+        document
+          .getElementById("addButton")
+          .addEventListener("click", addToTable);
+        document
+          .getElementById("clearButton")
+          .addEventListener("click", clearInputs);
+
+        document
+          .getElementById("resetButton")
+          .addEventListener("click", resetTable);
+      }
+
+      window.addEventListener("load", start);
+    </script>
+  </head>
+  <body>
+    <h1>Shopping Lists</h1>
+    <table id="shoppingTable">
+      <tbody id="shoppingTableBody">
+        <tr>
+          <td>Item Name</td>
+          <td>Amount</td>
+          <td>Price</td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="resetButton">reset List</button>
+    <form>
+      <label for="itemName"
+        >Item Name:
+        <input type="text" id="itemName" name="itemName" />
+      </label>
+      <br />
+      <label for="amount"
+        >Amount:
+        <input type="number" id="amount" name="amount" />
+      </label>
+      <br />
+      <label for="price"
+        >Price:
+        <input type="number" id="price" name="price" />
+      </label>
+      <br />
+      <button type="button" id="addButton" onclick="{addToTable}">Add</button>
+      <button type="button" id="clearButton" onclick="resetTable()">
+        Clear
+      </button>
+    </form>
+  </body>
+</html>
